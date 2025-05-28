@@ -5,18 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fridge Cleaner AI</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <h1>Refrigerator Ingredients Monologue</h1>
+  <div class="main-bg-rectangle">
+    <h1>Refrigerator Ingredients Monologue</h1>
+    
+    <input type="file" id="imageInput" accept="image/*" />
+    <img id="preview" alt="Image Preview" style="display:none;" />
   
-  <input type="file" id="imageInput" accept="image/*" />
-  <img id="preview" alt="Image Preview" style="display:none;" />
-
-  <div style="text-align: center; margin-top: 1rem;">
-    <button id="uploadBtn" disabled>Upload and generate monologue</button>
+    <div style="text-align: center; margin-top: 1rem;">
+      <button id="uploadBtn" disabled>Upload and generate monologue</button>
+    </div>
+  
+    <div id="result"></div>
   </div>
-
-  <div id="result"></div>
 
   <script src="app.js"></script>
 </body>
