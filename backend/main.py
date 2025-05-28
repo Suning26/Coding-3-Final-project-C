@@ -7,7 +7,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload_images', methods=['POST'])
 def upload_file():
     file = request.files['image']
     path = os.path.join(UPLOAD_FOLDER, file.filename)

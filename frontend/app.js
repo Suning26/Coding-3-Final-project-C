@@ -21,25 +21,25 @@ uploadBtn.addEventListener('click', async () => {
   if (!file) return;
 
   uploadBtn.disabled = true;
-  resultDiv.textContent = '正在生成，请稍候...';
+  resultDiv.textContent = 'Generating, please wait...';
 
   const formData = new FormData();
   formData.append('file', file);
 
   try {
-    const response = await fetch('/api/upload', {
+    const response = await fetch('/api/upload_images', {
       method: 'POST',
       body: formData
     });
 
     if (!response.ok) {
-      throw new Error('上传失败: ' + response.statusText);
+      throw new Error('Upload failed: ' + response.statusText);
     }
 
     const data = await response.json();
-    resultDiv.textContent = data.story || '无返回内容';
+    resultDiv.textContent = data.story || 'No content returned';
   } catch (error) {
-    resultDiv.textContent = '错误: ' + error.message;
+    resultDiv.textContent = 'Error: ' + error.message;
   } finally {
     uploadBtn.disabled = false;
   }
