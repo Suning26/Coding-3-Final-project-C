@@ -4,7 +4,7 @@
 
 **Author: Suning Xiao (24007352)**
 
-**Overview: OVERVIEW.md**
+**Overview: [OVERVIEW.md](https://github.com/Suning26/Coding-3-Final-project-C/blob/main/OVERVIEW.md)**
 
 **Demo video:**
 
