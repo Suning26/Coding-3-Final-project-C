@@ -1,42 +1,15 @@
 # Coding-3-Final-project-C
 
-video（）
+**Title: Fridge CLeaner AI**
 
-**L01.批判性分析与项目主题提出**
+**Author: Suning Xiao (24007352)**
 
-在对 Parasecoli（2020）《Food, Media and Contemporary Culture: The Edible Image》 一书的研读中，我进行了一次深入的批判性分析。作者指出，数字媒介中的“可食图像”不仅仅是视觉符号的再现，而是构建了我们对食物的认知框架与价值体系。这种由社交平台推动的“视觉化食物消费”在激发创意的同时，也潜藏着消费主义、美学裹挟和真实物质被忽视的风险。
+**Overview: OVERVIEW.md**
 
-我由此意识到，尽管网络上关于食物创意内容（如残余食材再利用）层出不穷，但大多数仍停留在“图像再创造”的表面，缺乏对食物生命周期与资源管理的结构性回应。这促使我思考：能否借助人工智能的结构性与系统性特征，对这些“厨房边角料”的物质状态与时间价值进行再定义？同时，在输出层面引入“食材叙事性表达”作为反讽或补充，让被忽视的食物拥有表达自身的权利。
+**Demo video:**
 
-在上述分析基础上，我构想了一个聚焦家庭厨房情境的创意AI系统：用户通过上传冰箱照片，系统自动识别其中的剩余食材，结合保质期、营养密度与色彩分布等数据，智能规划其推荐处理顺序，并以“食材家庭日记”或“第一人称剧本”的形式呈现。例如，临近过期的牛奶将以《牛奶的最后致辞》进行拟人化表达。该项目不仅关注食物管理的实用效率，也关注食物的“情感表达”与“生命周期尊严”，将AI作为批判性设计与叙事创作的媒介。
+**Introduction:**
 
-**L02.创意探索与实践过程**
+本项目旨在构建一个基于图像识别与自然语言生成技术的交互式网页应用，用户通过上传冰箱照片，系统自动识别剩余食材，结合保质期、营养价值等信息，生成具有情感色彩与叙事性的“食材独白”，以此减少食物浪费。系统将通过训练好的图像识别模型识别图像中的各类食材，调用保质期数据库进行时序计算，最后由文本生成模型输出食材的第一人称文本。该项目融合人工智能、创意写作与可持续生活理念，既具实用价值，也富有趣味性和社会意义。用户可在平台中浏览食材叙事内容，获取节约建议，提升食材管理效率的同时，也通过幽默的文本获得了一定的情绪价值。
 
-1. 灵感来源与方法探索
-项目的直接灵感来源于社交平台上广受欢迎的 #我对厨房边角料动了手 话题，用户以创意方式处理日常剩余食材，展现了个体化的厨房智慧。我在 Instagram 与 Pinterest 上还发现了类似主题标签如 #cookwithwhatyouhave 和 #cookwithwhatyouhaveinthefridge，这些内容中普遍缺乏结构性时间管理与营养分析，而偏重于感性创意输出。这一观察促使我设想构建一个融合人工智能与叙事生成的系统：结合 计算机视觉、图像识别、文本生成模型（如GPT） 和 保质期数据库，实现从输入冰箱图像到生成食材剧本的全过程。
-
-为此，我研究了图像识别在家庭场景中的迁移应用，借助经过微调的 Food-101 分类模型对冰箱内图片中的食材进行快速标注；同时，使用开源保质期数据（如 Open Food Facts API）推算剩余可食用时间，并结合语义模板生成个性化剧本。
-
-2. 初始原型、挑战与解决方案
-初步原型包括四个核心模块：食材识别、保质期计算、文本生成、图文排版。
-
-早期挑战包括：
-
- - 图像模糊/遮挡问题：某些冰箱图像中光线不佳，导致识别错误；
-✅ 解决方式：引导用户上传分层图像，或使用手机点击标注辅助模型；
- - 文本生成缺乏趣味性或结构单一；
-✅ 解决方式：建立“食材性格库”与“语气模板库”，如牛奶使用温柔口吻、香肠使用粗犷风格等，增强叙事张力。
-最终系统能根据每个食材状态生成不同风格的文本，如诗歌、日记、剧本等，配合食材原图或生成图像，呈现拟人化的“冰箱剧场”。
-
-3. 迭代过程与设计演进
-在用户测试阶段，我邀请3位家庭主妇与2位学生使用该原型系统进行操作，并收集反馈。其中一项重要反馈是“希望能直接得到处理建议”。这促使我在第二版中引入推荐食谱与处理方案模块，在情感表达之外加入实际指导价值。
-
-此外，我也调整了语言生成部分，使其在保持拟人化的同时，更具“实用混搭趣味”：如“一颗胡萝卜的临别感言”中含有“建议你用我来炖牛腩，别再拖了”。
-
-4. 与日常生活/专业工作的联系
-这个项目不仅与我平时的生活习惯紧密相关（我本人习惯记录食材保质期并尝试低浪费烹饪），也与我的专业学习和未来职业方向直接关联。我主修创意计算机，项目融合了 AI、NLP、人机交互与叙事设计等多个交叉领域。
-
-在更广泛的层面，它也回应了当代创意技术与生活实践的一个重要趋势：如何让AI参与到日常生活的诗意表达与资源管理之中，不仅是作为效率工具，也是作为共创伙伴。
-
-(几个平台的截屏image)
-
+This project aims to build an interactive web application based on image recognition and natural language generation technology. Users upload photos of their refrigerators, and the system automatically identifies the remaining ingredients. Combined with information such as shelf life and nutritional value, it generates an emotional and narrative "ingredient monologue" to reduce food waste. The system will use the trained image recognition model to identify various ingredients in the image, call the shelf life database for time series calculation, and finally output the first-person text of the ingredients through the text generation model. This project combines artificial intelligence, creative writing and sustainable living concepts, and is both practical and interesting and socially significant. Users can browse the narrative content of ingredients on the platform, get saving suggestions, improve the efficiency of ingredient management, and also gain certain emotional value through humorous texts.
